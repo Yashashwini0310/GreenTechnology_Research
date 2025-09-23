@@ -1,0 +1,22 @@
+# Service
+fastapi
+uvicorn
+
+# Load testing
+locust
+
+# AWS / GCP SDKs
+boto3
+google-cloud-monitoring
+google-cloud-billing
+
+# Analysis
+pandas
+numpy
+scipy
+matplotlib
+
+# Dev tools (optional)
+black
+flake8
+pytest

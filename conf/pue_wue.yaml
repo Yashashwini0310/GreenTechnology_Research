@@ -1,0 +1,10 @@
+aws:
+  eu-west-1:
+    pue: 1.20 # placeholder; replace with best-known value
+    wue: 0.50 # L/kWh placeholder
+
+
+gcp:
+  europe-west1:
+    pue: 1.10 # placeholder
+    wue: 0.40 # L/kWh placeholder

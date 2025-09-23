@@ -1,0 +1,1 @@
+{ "rps": 100, "duration_minutes": 10, "warmup_minutes": 5, "mix": {"compute": 0.7, "io": 0.3} }
