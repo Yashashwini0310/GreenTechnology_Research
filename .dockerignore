@@ -1,0 +1,10 @@
+.git
+.venv
+__pycache__/
+*.pyc
+infra/
+results/
+analysis/
+load_tests/
+scripts/
+README.md
