@@ -49,20 +49,32 @@ variable "github_repo" {
   default = "sustainability-compute-study"
 
 }
-
-#fargate setup
-variable "ecr_repo" {
+# Instance type for the ECS container host
+variable "ecs_instance_type" {
   type    = string
-  default = "sust-microservice"
+  default = "t3.medium"
 }
-variable "image_tag" {
-  type    = string
-  default = "v1"
-}
+# #fargate setup
+# variable "ecr_repo" {
+#   type    = string
+#   default = "sust-microservice"
+# }
+# variable "image_tag" {
+#   type    = string
+#   default = "v1"
+# }
 
 # variables.tf
-variable "task_execution_role_name" {
+variable "ecs_instance_profile_name" {
   type        = string
-  description = "LabRole"
-  default     = "ecsTaskExecutionRole"
+  description = "LabRole existing"
+  default     = "LabInstanceProfile"
+}
+
+variable "ecr_repo" {
+  default = "sust-microservice"
+}
+
+variable "image_tag" {
+  default = "v1"
 }
