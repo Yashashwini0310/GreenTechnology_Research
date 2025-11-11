@@ -1,8 +1,7 @@
-#!/home/ec2-user/environment/GreenTechnology_Research/.venv/bin/python3
-# -*- coding: utf-8 -*-
-import re
+#!/root/GreenTechnology_Research-1/.venv/bin/python3
 import sys
 from fastapi.cli import main
 if __name__ == '__main__':
-    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    if sys.argv[0].endswith('.exe'):
+        sys.argv[0] = sys.argv[0][:-4]
     sys.exit(main())
