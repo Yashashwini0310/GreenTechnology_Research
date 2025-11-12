@@ -100,7 +100,7 @@ resource "aws_launch_template" "ecs_lt" {
 
   # attach SG that allows ALB->8080
   # vpc_security_group_ids = [aws_security_group.ec2_sg_ecs.id]
-   network_interfaces {
+  network_interfaces {
     device_index                = 0
     associate_public_ip_address = true
     security_groups             = [aws_security_group.ec2_sg_ecs.id]
@@ -124,7 +124,7 @@ resource "aws_launch_template" "ecs_lt" {
 
 # --- AutoScaling group to provide 1 container host ---
 resource "aws_autoscaling_group" "ecs_asg" {
-  name                = "${var.project}-ecs-asg"
+  name_prefix         = "${var.project}-ecs-asg"
   max_size            = 1
   min_size            = 1
   desired_capacity    = 1

@@ -9,7 +9,7 @@ variable "project" {
 }
 variable "ec2_instance_type" {
   type    = string
-  default = "t3.medium"
+  default = "t3.micro"
 
 }
 
@@ -52,23 +52,14 @@ variable "github_repo" {
 # Instance type for the ECS container host
 variable "ecs_instance_type" {
   type    = string
-  default = "t3.medium"
+  default = "t3.micro"
 }
-# #fargate setup
-# variable "ecr_repo" {
-#   type    = string
-#   default = "sust-microservice"
-# }
-# variable "image_tag" {
-#   type    = string
-#   default = "v1"
-# }
 
 # variables.tf
 variable "ecs_instance_profile_name" {
   type        = string
   description = "LabRole existing"
-  default     = "LabInstanceProfile"
+  default     = "LabRole"
 }
 
 variable "ecr_repo" {

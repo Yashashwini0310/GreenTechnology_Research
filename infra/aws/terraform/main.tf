@@ -72,6 +72,18 @@ data "aws_subnets" "default" {
     name   = "vpc-id"
     values = [data.aws_vpc.default.id]
   }
+  # Only pick AZs where your instance type is supported.
+  # us-east-1e is excluded on purpose.
+  filter {
+    name = "availability-zone"
+    values = [
+      "${var.region}a",
+      "${var.region}b",
+      "${var.region}c",
+      "${var.region}d",
+      "${var.region}f"
+    ]
+  }
 }
 
 resource "aws_instance" "vm" {
