@@ -1,3 +1,0 @@
-Method,Name,Error,Occurrences
-GET,/compute,HTTPError('429 Client Error: Too Many Requests for url: /compute'),7779
-GET,/io,HTTPError('429 Client Error: Too Many Requests for url: /io'),3335
